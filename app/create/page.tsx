@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import axios from "axios";
+import Footer from "@/components/Footer";
 
 const countWords = (text: any) => {
   const words = text.trim().split(/\s+/);
@@ -48,58 +49,78 @@ const CreatePostForm = () => {
   };
 
   return (
-    <div className="text-white bg-backgroundColor flex items-center justify-center h-[100vh] w-[100%]">
-      <div className="w-[50%] h-[50%] border p-4">
-        <h1 className="text-center font-bold font-Wsans md:text-3xl text-xl mb-4">
+    <div className=" min-h-screen flex items-center justify-center">
+      <div className="bg-gray-800 w-[50%] p-8 shadow-lg rounded-lg">
+        <h1 className="text-white text-center font-bold text-3xl mb-6">
           Create a Blog
         </h1>
         <form onSubmit={handleSubmit}>
           <div className="mb-4">
-            <label htmlFor="name">Name:</label>
+            <label
+              htmlFor="name"
+              className="block mb-2 text-sm font-bold text-gray-200"
+            >
+              Name:
+            </label>
             <input
               type="text"
               id="name"
-              className="border border-gray-400 rounded w-full py-2 px-3 text-black"
+              className="bg-gray-700 text-white border border-gray-700 rounded w-full py-2 px-3"
               value={name}
               onChange={(e) => setName(e.target.value)}
             />
           </div>
           <div className="mb-4">
-            <label htmlFor="image">Image:</label>
+            <label
+              htmlFor="image"
+              className="block mb-2 text-sm font-bold text-gray-200"
+            >
+              Image:
+            </label>
             <input
               type="text"
               id="image"
-              className="border border-gray-400 rounded w-full py-2 px-3 text-black"
+              className="bg-gray-700 text-white border border-gray-700 rounded w-full py-2 px-3"
               value={image}
               onChange={(e) => setImage(e.target.value)}
             />
           </div>
           <div className="mb-4">
-            <label htmlFor="title">Description:</label>
+            <label
+              htmlFor="title"
+              className="block mb-2 text-sm font-bold text-gray-200"
+            >
+              Title:
+            </label>
             <input
               type="text"
               id="title"
-              className="border border-gray-400 rounded w-full py-2 px-3 text-black"
+              className="bg-gray-700 text-white border border-gray-700 rounded w-full py-2 px-3"
               value={title}
               onChange={(e) => setTitle(e.target.value)}
             />
           </div>
           <div className="mb-4">
-            <label htmlFor="description">Title: `-' No Need</label>
-            <input
-              type="text"
+            <label
+              htmlFor="description"
+              className="block mb-2 text-sm font-bold text-gray-200"
+            >
+              Description:
+            </label>
+            <textarea
               id="description"
-              className="border border-gray-400 rounded w-full py-2 px-3 text-black"
+              disabled
+              className="bg-gray-700 text-white border border-gray-700 rounded w-full py-2 px-3 resize-none h-32 disabled"
               value={description}
               onChange={handleDescriptionChange}
             />
-            <p>
+            <p className="text-gray-300 text-sm mt-1">
               {countWords(description)} / {maxWords} words
             </p>
           </div>
           <button
             type="submit"
-            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+            className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:ring-2 focus:ring-blue-400"
           >
             Submit
           </button>

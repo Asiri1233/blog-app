@@ -18,9 +18,9 @@ const page = () => {
       <div>
         <PostsGird />
       </div>
-      <div>
+      {/* <div>
         <Footer />
-      </div>
+      </div> */}
     </div>
   );
 };
