@@ -1,4 +1,5 @@
 import AdSlot from "@/components/AdSlot";
+import Footer from "@/components/Footer";
 import HeroSection from "@/components/HeroSection";
 import Navbar from "@/components/Navbar";
 import PostsGird from "@/components/PostsGird";
@@ -16,6 +17,9 @@ const page = () => {
       </div>
       <div>
         <PostsGird />
+      </div>
+      <div>
+        <Footer />
       </div>
     </div>
   );

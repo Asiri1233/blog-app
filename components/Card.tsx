@@ -18,7 +18,7 @@ const Card: React.FC<DataProps> = ({ data }) => {
       <div className="bg-[#181A2A] border-[#242535] border max-w-[392px] min-h-[488px] flex flex-col">
         <div className="flex justify-center items-center flex-col">
           <div className="p-4">
-            <img src="placeholder.png" alt="img" />
+            <img src={data.image} alt="img" />
           </div>
           <div className="ml-4 w-[344px]">
             <p className="text-blue-600 ">Technology</p>

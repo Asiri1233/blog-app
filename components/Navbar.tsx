@@ -51,7 +51,7 @@ const Navbar = () => {
         </div>
       </nav>
       {shownav && (
-        <div className="lg:hidden flex w-full h-[100vh] justify-center items-center bg-black text-white">
+        <div className="lg:hidden flex w-full h-[100vh] justify-center items-center  text-white">
           <nav className="flex justify-center items-center flex-col">
             {navlinks.map((item) => (
               <ul
